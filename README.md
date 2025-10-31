@@ -1,55 +1,83 @@
-Student Project Management System (Flask + MySQL)
-A mini project management web application built using Flask and MySQL. This system allows students, guides, and coordinators to manage academic projects, assign tasks, track progress, and collaborate efficiently.
-Features
-• User authentication (Register/Login/Logout)
-• Role-based access — Student, Guide, and Coordinator
-• Create, update, and delete projects
-• Add team members and assign roles
-• Add and manage project tasks with progress tracking
-• Dynamic progress bar based on task completion
-• Simple, clean UI with inline alerts and confirmation prompts
-Tech Stack
-Component	Technology
-Backend	Flask (Python)
-Database	MySQL
-Frontend	HTML + CSS (inline templates)
-Authentication	Werkzeug Security (hashed passwords)
-Installation Guide
-Follow these steps to set up and run this project on your local machine:
-1.	1️⃣ Clone this repository:
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
-2.	2️⃣ Set up a virtual environment (recommended):
-python -m venv venv
-source venv/Scripts/activate (Windows)
-source venv/bin/activate (Linux/Mac)
-3.	3️⃣ Install dependencies:
-pip install flask mysql-connector-python werkzeug
-4.	4️⃣ Configure MySQL Database:
-CREATE DATABASE project_mgmt;
-Then edit DB_CONFIG in app.py to match your MySQL username and password.
-5.	5️⃣ Run the application:
-python app.py
-6.	6️⃣ Access in your browser:
-http://127.0.0.1:5000
-Default Roles & Functionalities
-• Student: Create projects, add tasks, invite team members
-• Guide: View assigned projects, update task statuses
-• Coordinator: View all projects and statuses
-Database Schema Overview
-Tables created automatically on first run:
-1. users — stores login details and roles
-2. projects — stores project info and links to creator/guide
-3. project_members — maintains team structure
-4. tasks — manages project tasks and progress
-Example Workflow
-1. Register as a Student and login.
-2. Create a new project and optionally assign a Guide.
-3. Add Tasks and mark their progress.
-4. Add Team Members by username.
-5. Guides can view assigned projects and update tasks.
-6. Coordinators can view all projects.
-Author
-Dushyant Krishna Sharma
-📧 your-email@example.com
-🌐 GitHub: https://github.com/<your-username>
+# 🧾 Student Project Management System
+
+## 📘 Overview
+The **Student Project Management System** is a C++-based console application designed to efficiently manage student academic projects.  
+It allows users to **add**, **search**, **update**, **delete**, and **display** project details such as project title, team members, guide, and project status.  
+This system uses **file handling** for data storage, ensuring persistence and easy retrieval.
+
+---
+
+## 🛠️ Features
+- ➕ **Add New Project:** Enter and store project details.
+- 🔍 **Search Project:** Find a specific project by title.
+- 📋 **View All Projects:** Display all projects in a structured format.
+- ✏️ **Update Project:** Modify existing project details.
+- ❌ **Delete Project:** Remove a project from the record.
+- 💾 **File-Based Storage:** Data stored in a simple text file (`data.txt`).
+
+---
+
+## 🧩 System Structure
+StudentProjectManagement/
+├── main.cpp
+├── project.h
+├── project.cpp
+└── data.txt
+---
+
+## 💻 Technologies Used
+- **Language:** C++  
+- **Compiler:** GCC / G++  
+- **IDE:** Visual Studio Code / Code::Blocks / Dev C++  
+- **Operating Systems:** Windows / Linux / macOS  
+
+---
+
+## ⚙️ Compilation and Execution
+
+### 🧱 Compile:
+```bash
+g++ main.cpp project.cpp -o project_manager
+Run:
+bash
+Copy code
+./project_manager
+(Use project_manager.exe on Windows)
+
+🧑‍💻 Menu Example
+markdown
+Copy code
+========================================
+     STUDENT PROJECT MANAGEMENT SYSTEM
+========================================
+1. Add New Project
+2. View All Projects
+3. Search Project
+4. Update Project
+5. Delete Project
+6. Exit
+Enter your choice:
+📂 Sample Output
+yaml
+Copy code
+Project Title: AI-Based Traffic System
+Team Members: Dushyant, Riya, Arjun
+Guide: Prof. Mehta
+Status: Ongoing
+----------------------------------------
+Project Title: Spam Email Detection
+Team Members: Balaji, Rohan
+Guide: Dr. Sharma
+Status: Completed
+----------------------------------------
+🚀 Future Enhancements
+🗄️ Integrate database support (MySQL/SQLite).
+
+🔐 Add login authentication for admin and students.
+
+🖥️ Develop a GUI using Qt or Python Tkinter.
+
+📊 Include project evaluation and grading module.
+
+🧾 Export project data to PDF or Excel.
+
